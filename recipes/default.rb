@@ -26,7 +26,7 @@ remote_file node.solr.download do
 end
 
 bash 'unpack solr' do
-  code   "tar xzf #{node.solr.download} -C #{node.solr.extracted}"
+  code   "tar xzf #{node.solr.download} -C #{node.solr.directory}"
   not_if "test -d #{node.solr.extracted}"
 end
 
