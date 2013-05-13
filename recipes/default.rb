@@ -23,6 +23,7 @@ remote_file node.solr.download do
   source   node.solr.link
   checksum node.solr.checksum
   mode     0644
+  not_if   "test -d #{node.solr.download}"
 end
 
 bash 'unpack solr' do
