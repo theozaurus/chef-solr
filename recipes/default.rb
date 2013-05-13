@@ -23,7 +23,7 @@ remote_file node.solr.download do
   source   node.solr.link
   checksum node.solr.checksum
   mode     0644
-  not_if   "test -d #{node.solr.download}"
+  action :create_if_missing
 end
 
 bash 'unpack solr' do
