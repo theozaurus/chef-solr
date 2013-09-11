@@ -1,6 +1,6 @@
 include_attribute "jetty"
 
-expand!
+expand! unless Chef::Config[:solo]
 
 default[:solr][:version]   = "3.6.1"
 default[:solr][:directory] = "/usr/local/src"
