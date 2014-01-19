@@ -12,7 +12,7 @@ if solr.version.split('.').first.to_i >= 4
   default[:solr][:extracted] = "#{solr.directory}/solr-#{solr.version}"
   default[:solr][:war]       = "#{solr.extracted}/dist/solr-#{solr.version}.war"
 else
-  default[:solr][:link]      = "http://www.mirrorservice.org/sites/ftp.apache.org/lucene/solr/#{solr.version}/apache-solr-#{solr.version}.tgz"
+  default[:solr][:link]      = "http://archive.apache.org/dist/lucene/solr/#{solr.version}/apache-solr-#{solr.version}.tgz"
   default[:solr][:download]  = "#{solr.directory}/apache-solr-#{solr.version}.tgz"
   default[:solr][:extracted] = "#{solr.directory}/apache-solr-#{solr.version}"
   default[:solr][:war]       = "#{solr.extracted}/dist/apache-solr-#{solr.version}.war"
