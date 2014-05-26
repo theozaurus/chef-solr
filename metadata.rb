@@ -1,3 +1,4 @@
+name             "chef-solr"
 maintainer       "Jiva Technology, Ltd."
 maintainer_email "theo@jivatechnology.com"
 license          "Apache 2.0"
